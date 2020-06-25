@@ -1,0 +1,15 @@
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\Servicios.dll
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\DAL.dll
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\EntityFramework.dll
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\DAL.pdb
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\DAL.dll.config
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\EntityFramework.xml
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\obj\Debug\Servicios.csprojAssemblyReference.cache
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\obj\Debug\Servicios.csproj.CoreCompileInputs.cache
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\obj\Debug\Servicios.csproj.CopyComplete
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\obj\Debug\Servicios.dll
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\obj\Debug\Servicios.pdb
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\Servicios.dll.config
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Basco\Source\Repos\EV2_PW3\Servicios\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EV2_PW3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CantidadPremiosPorCompetidor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CantidadPremios" Type="int" Nullable="false" />
+    <Property Name="Año" Type="int" Nullable="false" />
+    <Property Name="idCompetidor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Competidor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CantidadPremiosPorCompetidor_Competidor">
+    <End Role="Competidor" Type="Self.Competidor" Multiplicity="1" />
+    <End Role="CantidadPremiosPorCompetidor" Type="Self.CantidadPremiosPorCompetidor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Competidor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="CantidadPremiosPorCompetidor">
+        <PropertyRef Name="idCompetidor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EV2_PW3ModelStoreContainer">
+    <EntitySet Name="CantidadPremiosPorCompetidor" EntityType="Self.CantidadPremiosPorCompetidor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Competidor" EntityType="Self.Competidor" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CantidadPremiosPorCompetidor_Competidor" Association="Self.FK_CantidadPremiosPorCompetidor_Competidor">
+      <End Role="Competidor" EntitySet="Competidor" />
+      <End Role="CantidadPremiosPorCompetidor" EntitySet="CantidadPremiosPorCompetidor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+﻿Nombre:
+<select data-val="true" data-val-required="Debe seleccionar un competidor" id="idCompetidor" name="idCompetidor">
+    <option value="">Seleccionar</option>
+    @foreach (DAL.Competidor comp in ViewBag.Todos)
+    {
+        if (comp.id == ViewBag.IdCompetidor)
+        {
+            <option value="@comp.id" selected="selected">@comp.Nombre</option>
+        }
+        else
+        {
+            <option value="@comp.id">@comp.Nombre</option>
+        }
+    }
+</select>
+
+<span class="field-validation-valid" data-valmsg-for="idCompetidor" data-valmsg-replace="true"></span>

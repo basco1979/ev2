@@ -1,0 +1,28 @@
+﻿@model List<DAL.Competidor>
+@{
+    ViewBag.Title = "ListaCompetidores";
+}
+
+<h2>ListaCompetidores</h2>
+<form action="/Competidores/ListaCompetidores" method="post">
+    <div>
+        <a>@Html.ActionLink("Crear Nuevo Competidor", "AltaCompetidor", "Competidores")</a>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                
+            </tr>
+
+            @foreach (var competidor in Model)
+            {
+                <tr>
+                    <td>@competidor.Nombre</td>
+                </tr>
+            }
+        </table>
+    </div>
+</form>
+
+

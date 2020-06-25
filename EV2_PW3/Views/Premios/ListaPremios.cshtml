@@ -1,0 +1,32 @@
+﻿@model List<DAL.CantidadPremiosPorCompetidor>
+@{
+    ViewBag.Title = "ListaPremios";
+}
+
+<h2>Lista de Premios</h2>
+
+<form action="/Premios/ListaPremios" method="post">
+    <div>
+        <a>@Html.ActionLink("Crear Nuevo Premio", "AltaPremios", "Premios")</a>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Año</th>
+                <th>Cantidad de Premios</th>
+                <th>Nombre Competidor</th>
+
+            </tr>
+
+            @foreach (var premio in Model)
+            {
+        <tr>
+            <td>@premio.Año</td>
+            <td>@premio.CantidadPremios</td>
+            <td>@premio.Competidor.Nombre</td>
+
+        </tr>
+            }
+        </table>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+﻿@model DAL.CantidadPremiosPorCompetidor
+@{
+    ViewBag.Title = "AltaPremios";
+}
+
+<h2>Alta de Premios</h2>
+
+<form action="/Premios/AltaPremios" method="post">
+    <div>
+        @Html.Partial("~/Views/Competidores/pv_ComboCompetidores.cshtml")
+        @Html.ValidationMessageFor(o => o.idCompetidor)
+    </div>
+    <div>
+        Cantidad:
+        @Html.EditorFor(o => o.CantidadPremios)
+        @Html.ValidationMessageFor(o => o.CantidadPremios)
+    </div>
+    <div>
+        Año:
+        @Html.EditorFor(o => o.Año)
+        @Html.ValidationMessageFor(o => o.Año)
+    </div>
+    <div>
+        <input type="submit" value="Guardar" />
+    </div>
+</form>
